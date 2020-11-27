@@ -1,0 +1,165 @@
+@import 'config'
+
+#header
+    +padding(20px null)
+    text-align: center
+    .gridD
+        +display(flex)
+        +justify-content(space-between)
+    img
+        max-width: 120px
+    .socials
+        +display(flex)
+        +align-items(center)
+        .instagram
+            color: $purple
+            font-size: 25px
+            line-height: 1em
+
+#banner
+    img
+        max-width: 100%
+        height: auto
+        display: block
+
+#popup-send
+    +position(fixed, 0 null null 50%)
+    +transform(translateX(-50%))
+    z-index: 2
+    +padding(10px 20px)
+    background: $cyan
+    text-align: center
+    @extend %transition
+    max-width: 250px
+    +border-bottom-radius(10px)
+    p
+        color: $white
+        font-family: $font-Light
+        text-align: center
+        text-transform: uppercase
+        font-weight: 700
+        line-height: 1.2em
+        font-size: 14px
+    a
+        background: $orange
+        color: $white
+        +padding(5px 10px)
+        display: inline-block
+        border-radius: 3px
+        font-family: $font-Light
+        text-transform: uppercase
+        font-weight: 700
+        margin-top: 5px
+        @extend %transition
+        &:hover
+            background: $gold
+            color: $black
+    &.hidden
+        top: -150px
+
+#filters
+    +display(flex)
+    +align-items(center)
+    +justify-content(center)
+    margin-bottom: 20px
+    @media(max-width: 768px)
+        +flex-wrap(wrap)
+    .filter
+        font-family: $font-Light
+        text-transform: uppercase
+        border-radius: 500px
+        +padding(5px 10px)
+        cursor: pointer
+        border: 1px solid $black
+        opacity: .5a
+        font-size: 14px
+        @media(max-width: 768px)
+            margin: 5px
+        + .filter
+            margin-left: 20px
+            @media(max-width: 768px)
+                margin: 5px
+        &.livre
+            background: $gold
+            border-color: $gold
+        &.pago
+            background: $pago
+            color: $white
+            border-color: $pago
+        &.reservado
+            background: $orange
+            color: $white
+            border-color: $orange
+        &.filter-active
+            opacity: 1
+#numbers
+    +display(flex)
+    +flex-wrap(wrap)
+    .number
+        position: relative
+        font-family: $font-Light
+        font-weight: 500
+        +margin(5px)
+        +size(40px)
+        background: $gold
+        color: $black
+        +display(flex)
+        +align-items(center)
+        +justify-content(center)
+        border-radius: 100%
+        font-size: 14px
+        &.clickable
+            cursor: pointer
+            &:hover
+                background: $orange
+                color: $white
+        &.selected
+            background: $cyan
+            color: $white
+        &.pago
+            background: $pago
+            color: $white
+            &:hover
+                background: $pago
+                color: $white
+                cursor: default
+        &.reservado
+            background: $green
+            color: $white
+            &:hover
+                background: $green
+                color: $white
+                cursor: default
+        &.hidden
+            opacity: .3
+            pointer-events: none
+            background: #CCCDDD
+            color: $black
+        .name
+            +position(absolute, null null 100% 50%)
+            background: $orange
+            opacity: 0
+            visibility: hidden
+            +size(150px 50px)
+            +display(flex)
+            +align-items(center)
+            +justify-content(center)
+            +transform(translateX(-50%))
+            text-align: center
+            margin-bottom: 10px
+            p
+                color: $white
+                font-size: 13px
+                font-weight: 300
+            &:before
+                content: ''
+                +size(0)
+                border-left: 10px solid transparent
+                border-right: 10px solid transparent
+                border-top: 10px solid $orange
+                +position(absolute, null null -10px 50%)
+                +transform(translateX(-50%))
+        &:hover
+            .name
+                opacity: 1
+                visibility: visible

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RIFAS - Brega Shop</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png?v=1">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png?v=1">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png?v=1">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png?v=1">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png?v=1">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png?v=1">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png?v=1">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png?v=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png?v=1">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicons/android-icon-192x192.png?v=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png?v=1">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png?v=1">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png?v=1">
+    <link rel="manifest" href="assets/img/favicons/manifest.json?v=1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png?v=1">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=1">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YZ5Y9GVB5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-9YZ5Y9GVB5');
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="gridD">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="">
+            </div>
+            <div class="socials">
+                <a class="instagram" href="https://instagram.com/brega.shop"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="banner">
+        <img src="assets/img/banner.jpg" alt="">
+    </div>
+    <div id="popup-send" class="hidden">
+        <p>Números selecionados</p>
+        <p class="selected-numbers"></p>
+        <a href="">Reservar</a>
+    </div>
+    <h1>RIFA DA BREGA</h1>
+    <h2><strong>PREMIO:</strong> IPHONE 12 PRO 128GB</h2>
+    <div class="gridD">
+        <div id="filters">
+            <div class="filter filter-active all" data-filter="all">TODOS <span></span></div>
+            <div class="filter filter-active livre" data-filter="livre">DISPONível <span></span></div>
+            <div class="filter filter-active reservado" data-filter="reservado">reservado <span></span></div>
+            <div class="filter filter-active pago" data-filter="pago">pago <span></span></div>
+        </div>
+        <div id="numbers"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyACuyKn5CzBhAe9DcLWDOCZz_Cp_4d1bZ8",
+            authDomain: "rifas-da-brega.firebaseapp.com",
+            databaseURL: "https://rifas-da-brega.firebaseio.com",
+            projectId: "rifas-da-brega",
+            storageBucket: "rifas-da-brega.appspot.com",
+            messagingSenderId: "720421419379",
+            appId: "1:720421419379:web:d912d45e929e7871b02d06"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="assets/js/scripts.js?v=1"></script>
+</body>
+</html>
